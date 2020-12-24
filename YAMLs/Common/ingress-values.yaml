@@ -9,9 +9,5 @@ controller:
    beta.kubernetes.io/os: linux
   defaultBackend:
     nodeSelector:
-      beta.kubernetes.io/os: linux
-  service:
-    loadBalancerIP: 187.0.0.200 #private IP
-    annotations:
-      service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+      beta.kubernetes.io/os: linux  
 
