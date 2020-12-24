@@ -9,5 +9,6 @@ controller:
    beta.kubernetes.io/os: linux
   defaultBackend:
     nodeSelector:
-      beta.kubernetes.io/os: linux  
+      beta.kubernetes.io/os: linux
+        
 
