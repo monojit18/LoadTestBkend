@@ -1,18 +1,17 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: aks-lt-ingress
-  namespace: aks-lt-dev
+  name: aks-bkend-ingress
+  namespace: aks-bkend-dev
   annotations:    
     kubernetes.io/ingress.class: nginx    
     nginx.ingress.kubernetes.io/rewrite-target: /$1    
     nginx.ingress.kubernetes.io/enable-cors: "true"       
 spec:  
   rules:   
-  - host: ingress-lt-dev.wkshpdev.com
-    http:
+  - http:
       paths:
       - path: /?(.*)
         backend:
-          serviceName: api-proxy-svc
+          serviceName: api-bkend-svc
           servicePort: 80
