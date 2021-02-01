@@ -8,10 +8,10 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /$1    
     nginx.ingress.kubernetes.io/enable-cors: "true"       
 spec:
-  # tls:
-  # - hosts:
-  #   - "*.wkshpdev.com"
-  #   secretName: aks-bkend-tls-secret
+  tls:
+  - hosts:
+    - "*.wkshpdev.com"
+    secretName: aks-bkend-tls-secret
   rules:   
   - host: bkdev.wkshpdev.com
     http:
